@@ -9,20 +9,22 @@ package com.example.singleton;
  *
  */
 public class Hungry {
+    // 静态变量，在类加载的时候就会赋值
     private static final Hungry INSTANCE = new Hungry();
 
+    // 私有化构方法
     private Hungry() {
     }
 
+    // 对外提供静态方法获取实例
     public static Hungry getInstance(){
         return INSTANCE;
     }
 
 
     public static void main(String[] args) {
-        Hungry instance = Hungry.getInstance();
         Hungry instance1 = Hungry.getInstance();
-        System.out.println(instance == instance1);
+        System.out.println(Hungry.INSTANCE == instance1);
     }
 
 }
