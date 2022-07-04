@@ -3,12 +3,12 @@ package com.example.factory.factoryMethod;
 /**
  * 单一类型的工厂类(hangingLamp)
  */
-public class HangingLampFactory extends LampFactory{
+public class HangingLightFactory extends LightFactory {
 
     // 单例化
-    public static final HangingLampFactory INSTANCE = new HangingLampFactory();
+    public static final HangingLightFactory INSTANCE = new HangingLightFactory();
 
-    private HangingLampFactory(){};
+    private HangingLightFactory(){};
 
     @Override
     public Light create() {
